@@ -1,4 +1,5 @@
 site_name: Final Project Documentation
+site_url: https://canting9.github.io/Spatial-Audio/
 theme:
   name: material
   features:

@@ -1,13 +1,3 @@
 # Introduction and Concept
-
-## Project Overview
-
-
-## Artistic Motivation
-
-
-## Image Examples
-You can insert images here:
-
-![Example](img/example.png)
+Our installation transforms music listening into a collaborative and interactive experience. Rather than a traditional DJ setup with a single performer, our system allows multiple participants to mix, sequence, and layer different stems simultaneously, fostering spontaneity and shared creativity. Inspired by the nightlife culture of Underground Atlanta, the musical styles range from electronic and hip-hop to experimental sounds, embedding the city’s underground sonic identity into the experience. The project merges interactive technology with community-driven performance, inviting participants to co-create music in an intuitive and immersive environment.
 

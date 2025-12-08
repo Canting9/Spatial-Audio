@@ -1,7 +1,6 @@
-<a href="img/visual1.JPG" class="md-image-link">
-  <img src="img/visual1.JPG" width="200px">
-</a>
-
-
-![Camera Setup](img/camera1.PNG){class="md-image"}
-![Camera Setup](img/camera2.PNG){class="md-image"}
+![Visual](img/visual1.JPG){ width="300px" height="200px"}
+![Visual](img/visual2.JPG){ width="300px" height="200px"}
+![Visual](img/visual3.JPG){ width="300px" height="200px"}
+![Visual](img/visual4.JPG){ width="300px" height="200px"}
+![Camera Setup](img/camera1.PNG){ width="300px" height="200px"}
+![Camera Setup](img/camera2.PNG){ width="300px" height="200px"}

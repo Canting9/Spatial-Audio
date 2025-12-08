@@ -1,12 +1,13 @@
-# Final Project Documentation
+# Final Project Documentation for Spacial Audio Class
 
-欢迎来到我们的最终项目文档网站。
+Welcome to our final project documentation website.
 
-本网站包含：
+This website contains:
 
-- 项目概念介绍  
-- 技术细节与系统架构  
-- 最终演出/展示的记录  
-- 参考文献（BibTeX 自动生成）
+- Project concept introduction
+- Technical details and system architecture
+- Documentation of the final presentation
+- Images and videos
+- References
 
-请使用左侧导航栏浏览所有页面。
+Please use the navigation bar on the top left to browse all pages.

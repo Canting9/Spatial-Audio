@@ -8,6 +8,12 @@ theme:
     - content.code.copy
 
 
+nav:
+  - Introduction and Concept: intro-concept.md
+  - Technical Details: tech-details.md
+  - Documentation of the Show: documentation.md
+  - Images: image.md
+  - Videos: video.md
 
 markdown_extensions:
   - admonition

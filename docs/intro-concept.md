@@ -1,13 +1,13 @@
-# Intro / Concept
+# Introduction and Concept
 
-## 项目概述
-（在这里描述你们的艺术概念、设计理念、目标用户、灵感来源…）
+## Project Overview
 
-## 艺术动机
-（为什么做这个？要表达什么？）
 
-## 图像示例
-你可以插入图片：
+## Artistic Motivation
+
+
+## Image Examples
+You can insert images here:
 
 ![Example](img/example.png)
 

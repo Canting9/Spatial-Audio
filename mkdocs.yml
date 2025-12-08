@@ -1,0 +1,17 @@
+site_name: Final Project Documentation
+theme:
+  name: material
+  features:
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+
+
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - codehilite
+  - footnotes
+  - attr_list

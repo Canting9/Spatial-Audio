@@ -6,10 +6,17 @@ Set up for this project took an unexpected and unfortunate turn when the MARTA t
 ## Audio
 Our audio was running in Ableton Live 11. The session set up was split into four track groupings: Lead, Bass, Chords, Drums. Each group of tracks had four individual tracks, each housing a distinct MIDI instrument. Each group of tracks also had a OSC mapper max for live device designed to map values inside ableton based on messages coming in through OSC. These messages coming from the x-axis of the camera interaction were mapped to one unique macro parameter per track . The macro would drastically change the sonic qualities of each track and would consist of a combination of effects such as filters, sequence, distortion, redux, and delay. Each audio track was created with the goal of working sonically with each other, no matter the combination of tracks. 
 
+![Ableton](img/Ableton.png){ width="600px" height="400px"}
+
 ## Visual
 The visual component of the project was designed to support the audio system and enhance the overall immersive environment. All visuals were developed in Jitter, combining custom Jitter patches with VIZZIE effects built on Jitter. The visual system is designed with two layers. The first layer consists of a signature particle system. Particles are triggered and modulated in real time by the audio drum volume, which is converted as OSC data.  When activated, particles appear to burst, disperse, and re-collect, flowing dynamically through virtual space correspondence with dynamic changes in the audio. The second layer functions as a background visual texture. This layer is constructed from a short, freely available visual clip featuring and pattern-based motion. The clip is heavily processed using multiple VIZZIE modules to create transformations in color, spatial distortion, feedback, and temporal delay. This background layer adds depth and variation to the visual field behind the particle system.
 
 Audience interaction is implemented with OSC control and is directly linked to the same logic used for audio interaction. Depth cameras track audience proximity and movement, and these measurements are mapped to four continuous control parameters within Jitter. These controls influence both the background visual patterns and the particle system, including parameters such as particle density, motion behavior, visual pattern, and visual shaking speed. As audiences move closer to or farther from the cameras, the visual environment responds in real time, which establishes a coherent link between physical presence, sound, and image. Overall, the visual system acts as an extension of the audio design, following the audio rhythmic structure and responding to the audience's body movements.
+
+![Visual](img/visual1.JPG){ width="300px" height="200px"}
+![Visual](img/visual2.JPG){ width="300px" height="200px"}
+![Visual](img/visual3.JPG){ width="300px" height="200px"}
+![Visual](img/visual4.JPG){ width="300px" height="200px"}
 
 ## Camera Settings
 For camera gesture interaction, Our system implements a real-time camera-gesture interaction pipeline using Intel RealSense depth cameras and the MediaPipe Hands model (cite). Depth sensing and RGB hand pose estimation are combined to extract two categories of interaction parameters: distance-based continuous control from the minimum depth within a predefined region of interest (ROI), and gesture-based triggers from 4 fingers recognition.
@@ -17,6 +24,8 @@ For camera gesture interaction, Our system implements a real-time camera-gesture
 The cameras stream synchronized depth and color frames. Depth frames are downsampled to reduce bandwidth and smoothed over time using a moving window average. MediaPipe Hands performs lightweight fingertip detection every N frames, making low-latency gesture recognition without using much computational resources. Each detected hand gesture information is normalized to image coordinates, and the exponential moving average (EMA) stabilizes the 3D gesture center across frames, minimizing jitter, and making hand information stable in low light and fast motion conditions.
 
 As for OSC, the component is consist of ‘’/volume’’, which a scalar in [0,1] mapped from the user's distance to the camera, and “/1”, “/2”,” /3”,” /4”, referring that the number of fingers map to different timbre of Lead, Bass, Chords, and Drums in audio part. Each gesture message has normalized horizontal position, vertical position, and average landmark depth. The design separates continuous and discrete control streams. That makes sure the interaction is smooth.Messages are transmitted using OSC over UDP through the “python-osc”package. Each camera has two OSC clients: the main endpoint sent to audio and a clone endpoint sent to the visual part.
+
+![Camera Setup](img/camera1.PNG){ width="600px" height="400px"}
 
 ## Interaction
 In terms of interactive implementation, our device supports up to four people controlling the music simultaneously. When a user faces one of the four cameras and holds up one to four fingers, each instrument plays one of four corresponding musical phrases. When the user maintains the gesture and moves their hand up, down, left, or right, various audio effects, such as filter parameters, change according to the movement coordinates, resulting in different sound experiences.
